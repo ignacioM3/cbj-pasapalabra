@@ -61,39 +61,6 @@ var estadoPreguntas = [0,0,0,0,0,0,0,0,0,0]
 var cantidadAcertadas = 0;
 
 
-let audio; 
-
-function iniciarmusic() {
-  if (!audio) { // Si no existe ya el objeto audio
-    audio = new Audio("./music.m4a");
-  }
-  audio.play();
-}
-
-// Función para detener la música
-function detenerMusic() {
-  if (audio) {
-    audio.pause();
-    audio.currentTime = 0; // Reinicia el audio al inicio
-  }
-}
-
-// Función para mutear/desmutear la música
-function toggleMute() {
-  if (audio) {
-    audio.muted = !audio.muted;
-
-    const muteIcon = document.getElementById("mute-icon");
-    if (audio.muted) {
-      muteIcon.classList.remove("fa-volume-high");
-      muteIcon.classList.add("fa-volume-low");
-    } else {
-      muteIcon.classList.remove("fa-volume-low");
-      muteIcon.classList.add("fa-volume-high");
-    }
-  }
-}
-
 
 
 //variable que mantiene el num de pregunta acual
@@ -118,14 +85,65 @@ responder.addEventListener("click", function() {
 });
 
 //boton comenzar
-var comenzar = document.getElementById("comenzar");
-iniciarmusic()
-comenzar.addEventListener("click", function(event) {
+let audio;
+
+// Crear el objeto `audio` y cargar la música
+function inicializarMusic() {
+  if (!audio) {
+    audio = new Audio("./music.m4a");
+  }
+}
+
+// Iniciar la música después de interacción
+function iniciarMusic() {
+  if (audio) {
+    audio.play().catch((error) => {
+      console.error("Error al reproducir la música:", error);
+    });
+  }
+}
+
+// Pausar y reiniciar la música
+function detenerMusic() {
+  if (audio) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+}
+
+// Alternar muteo de música
+function toggleMute() {
+  if (audio) {
+    audio.muted = !audio.muted;
+    actualizarIconoMute();
+  }
+}
+
+// Cambiar el ícono según el estado muteado
+function actualizarIconoMute() {
+  const icono = document.querySelector(".music i");
+  if (audio && audio.muted) {
+    icono.classList.remove("fa-volume-high");
+    icono.classList.add("fa-volume-low");
+  } else {
+    icono.classList.remove("fa-volume-low");
+    icono.classList.add("fa-volume-high");
+  }
+}
+
+// Vincular la inicialización al botón "Comenzar"
+const comenzar = document.getElementById("comenzar");
+comenzar.addEventListener("click", function () {
+  inicializarMusic(); // Crear el objeto audio
+  iniciarMusic(); // Reproducir música
   document.getElementById("pantalla-inicial").style.display = "none";
   document.getElementById("pantalla-juego").style.display = "block";
   largarTiempo();
   cargarPregunta();
 });
+
+
+
 
 //Creamos el circúlo con las letras de la A a la Z
 const container = document.querySelector(".container");
