@@ -27,7 +27,7 @@ const bd_juego = [
   {
     id:'E',
     pregunta:"Lo utilizamos para ir a distintos pisos en un edificio",
-    respuesta:"elevador"
+    respuesta:"escaleras"
   },
   {
     id:'F',
