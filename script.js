@@ -6,7 +6,7 @@ const TIEMPO_DEL_JUEGO = 120;
 const bd_juego = [
   {
       id:'A',
-      pregunta:"Taller que se dedica a la recreación ",
+      pregunta:"taller que implica la creación de pinturas, esculturas o dibujos",
       respuesta:"arte"
   },
   {
@@ -36,7 +36,7 @@ const bd_juego = [
   },
   {
     id:'G',
-    pregunta:"Expresión o palabra que usamos al momento de anotar",
+    pregunta:"Expresión o palabra que usamos al momento de anotar en el futbol",
     respuesta:"gol"
   },
   {
@@ -96,11 +96,15 @@ function inicializarMusic() {
 
 // Iniciar la música después de interacción
 function iniciarMusic() {
-  if (audio) {
-    audio.play().catch((error) => {
-      console.error("Error al reproducir la música:", error);
+  if (!audio) {
+    audio = new Audio("./music.m4a");
+    
+    audio.addEventListener("ended", function() {
+      audio.currentTime = 0; 
+      audio.play(); 
     });
   }
+  audio.play(); // Reproduce la canción
 }
 
 // Pausar y reiniciar la música
