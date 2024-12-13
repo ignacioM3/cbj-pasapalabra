@@ -287,6 +287,7 @@ recomenzar.addEventListener("click", function(event) {
   for(i=0;i<circulos.length;i++){
     circulos[i].classList.remove("bien-respondida");
     circulos[i].classList.remove("mal-respondida");
+    circulos[i].classList.remove("pregunta-actual");
   }
 
   document.getElementById("pantalla-final").style.display = "none";
