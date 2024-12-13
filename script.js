@@ -11,8 +11,8 @@ const bd_juego = [
   },
   {
     id:'B',
-    pregunta:"Término en ingles que hace referencia a una copia de seguridad",
-    respuesta:"backup"
+    pregunta:"Deporte predominante en estados unidos",
+    respuesta:"basquet"
   },
   {
     id:'C',
@@ -26,8 +26,8 @@ const bd_juego = [
   },
   {
     id:'E',
-    pregunta:"Mezclar los datos para protegerlos como medida de seguridad, es decir, convertir texto normal a texto cifrado",
-    respuesta:"encriptar"
+    pregunta:"Lo utilizamos para ir a distintos pisos en un edificio",
+    respuesta:"elevador"
   },
   {
     id:'F',
@@ -36,23 +36,23 @@ const bd_juego = [
   },
   {
     id:'G',
-    pregunta:"Lenguaje de programación crado por Google",
-    respuesta:"go"
+    pregunta:"Expresión o palabra que usamos al momento de anotar",
+    respuesta:"gol"
   },
   {
     id:'H',
-    pregunta:"lenguaje utilizado para la estructura a las páginas web",
-    respuesta:"html"
+    pregunta:"Palabra que utilizamos para saludar a una persona",
+    respuesta:"hola"
   },
   {
     id:'I',
-    pregunta:"Aspecto que presentan los programas tras su ejecución mediante el cual ejercemos la comunicación con éstos",
-    respuesta:"interfaz"
+    pregunta:"Acción de dejar de prestar atención o desestimar algo",
+    respuesta:"ignorar"
   },
   {
     id:'J',
-    pregunta:"Lenguaje de programación con el cual se diseño el sistema operativo Android",
-    respuesta:"java"
+    pregunta:"Articulo de limpieza que usamos al momento de bañarnos",
+    respuesta:"jabon"
   },
 ]
 
