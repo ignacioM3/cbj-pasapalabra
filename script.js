@@ -1,23 +1,23 @@
 //total preguntas del juego
 const TOTAL_PREGUNTAS = 10;
 //tiempo del juego
-const TIEMPO_DEL_JUEGO = 120;
+const TIEMPO_DEL_JUEGO = 520;
 //estructura para almacenar las preguntas
 const bd_juego = [
   {
       id:'A',
-      pregunta:"taller que implica la creación de pinturas, esculturas o dibujos",
+      pregunta:"Taller que implica la creación de pinturas, esculturas o dibujos",
       respuesta:"arte"
   },
   {
     id:'B',
-    pregunta:"Deporte predominante en estados unidos",
-    respuesta:"basquet"
+    pregunta:"Lugar donde se guardan los libros para leer o estudiar",
+    respuesta:"biblioteca"
   },
   {
     id:'C',
-    pregunta:"Nombre de la coordinadora del cbj de la loma",
-    respuesta:"charo"
+    pregunta:"Actividad artística donde varias personas cantan juntas",
+    respuesta:"coro"
   },
   {
     id:'D',
@@ -26,13 +26,13 @@ const bd_juego = [
   },
   {
     id:'E',
-    pregunta:"Lo utilizamos para ir a distintos pisos en un edificio",
-    respuesta:"escalera"
+    pregunta:"Persona que participa en un colegio o universidad para aprender",
+    respuesta:"estudiante"
   },
   {
     id:'F',
-    pregunta:"Famosa red social cread por Mark Zuckerberg",
-    respuesta:"facebook"
+    pregunta:"Persona con la que compartimos la misma sangre o parentesco",
+    respuesta:"familia"
   },
   {
     id:'G',
